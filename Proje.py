@@ -37,8 +37,6 @@ x, y, w, h = 523, 247, 875, 679 #Ekranın kordinatları, capture'laması gereken
      #(!!!) Ekran çözünürlüğüne göre bu değer değişir. Manuel olarak ayarlanması gerekebilir. 
 sleep(3) #Aktif etme tuşuna bastığımızda beklememiz gereken süre (3) bu 3 saniyelik aralıkta durumumuz: False 
 
-<<<<<<< HEAD
-=======
 while True:
 
     pyautogui.screenshot("foto/image.png", (x, y, w, h))
@@ -48,5 +46,4 @@ while True:
 
 
 
->>>>>>> afe059df4c0641a49cd83d157b8c3c4436c5b3c5
 
