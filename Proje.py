@@ -68,11 +68,21 @@ while True:
             method = cv.TM_CCOEFF_NORMED #TM_CCOEFF_NORMED yerine başka bir yöntem de seçebiliriz 
             # şablonlar burada: https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html#ga3a7850640f1fe1f58fe91a2d7583695d
         )
+
         min_val, max_val, min_loc, max_loc = cv.minMaxLoc(result)
         #sonuçları: max val highest matching score / en yüksek eşleşme değeri, max loc/ kordinat lokasyonu 
 
         #en iyi eşleşmeyi yakaladığımızdan emin olduktan sonra;
 
-        #Üstteki kodların eşik değerlerinin ayarlanması için if komutu ile düzenlenmesi gerekiyor.    
+        #Üstteki kodların eşik değerlerinin ayarlanması için if komutu ile düzenlenmesi gerekiyor.
+        
+        if max_val >= 0.8:
+            pyautogui.click(
+                x = max_loc[0] + x,
+                y = max_loc[1] + y 
+            )
+
+            #pyautogui.click ile belirttiğimiz koordinatlarda tıklama işlemi yapar. 
+            #max_loc ile objenin koordinatlarını buluruz üstüne x koordinatını ekleyerek nesnenin aranacak bölgesini oluşturuyoruz   
 
          
