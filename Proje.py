@@ -11,6 +11,16 @@ from time import sleep
 import keyboard
 #Programı başlatıp durdurmak için kullandığımız bir kütüphane.
 
+pyautogui.PAUSE = 0  
+  # Her pyautogui çağrısı arasında beklenilecek süredir. Şuan 0 olduğu için bekleme zamanı yok.
+
+
+print("Başlatmak için 's' tuşuna basınız.")
+print("Çıkmak için 'q' tuşuna basınız.")
+keyboard.wait('s')
+# "s" tuşuna basarak program başlatılır. 
+# "q" tuşuna basarak programdan çıkış yapılır. 
+
 
 #template (Şabonun seçimi(Burun) ve dosya merkezi burada, eğer çalışmazsa ekran görüntüsünü değiştir)
 template = cv.imread("foto/burun.png") #Şablon==template, klasör/png dosyasının ismini target gösteriyor
@@ -26,16 +36,5 @@ x, y, w, h = 523, 247, 875, 679 #Ekranın kordinatları, capture'laması gereken
      #İlk önce tüm ekranımızı Paint'e aktarıyoruz, bu sayede ekranın sol alt'da px örneğin(212,899) 212=x 899=y olarak oyunun açıldığı yerdeki ekran kordinatlarını alıyoruz.
      #(!!!) Ekran çözünürlüğüne göre bu değer değişir. Manuel olarak ayarlanması gerekebilir. 
 sleep(3) #Aktif etme tuşuna bastığımızda beklememiz gereken süre (3) bu 3 saniyelik aralıkta durumumuz: False 
-
-pyautogui.PAUSE = 0  
-  # Her pyautogui çağrısı arasında beklenilecek süredir. Şuan 0 olduğu için bekleme zamanı yok.
-
-
-print("Başlatmak için 's' tuşuna basınız.")
-print("Çıkmak için 'q' tuşuna basınız.")
-keyboard.wait('s')
-# "s" tuşuna basarak program başlatılır. 
-# "q" tuşuna basarak programdan çıkış yapılır. 
-
 
 
