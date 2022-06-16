@@ -1,3 +1,5 @@
+pip: İsteklerin çalışacağından emin olmak için her şeyi mevcut Python ortamınıza yükler.
+   Özellikle güncel sürümlerini indirir.
 
 İlk önce pip indir(Terminal); 
    pip'i güncelle
