@@ -1,8 +1,5 @@
-{
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
-}
+from re import template
+import cv2
+import pyautogui
+from time import sleep
+import keyboard
