@@ -27,6 +27,13 @@ x, y, w, h = 523, 247, 875, 679 #Ekranın kordinatları, capture'laması gereken
      #(!!!) Ekran çözünürlüğüne göre bu değer değişir. Manuel olarak ayarlanması gerekebilir. 
 sleep(3) #Aktif etme tuşuna bastığımızda beklememiz gereken süre (3) bu 3 saniyelik aralıkta durumumuz: False 
 
+while True:
+
+    pyautogui.screenshot("foto/image.png", (x, y, w, h))
+    #Ekran görüntüsü almak için kullanılan method.Klavyedeki ekran görüntüsü alma tuşunu çalıştırıyor
+    image = cv.imread("foto/image.png")
+    #cv2. imread() komutu belirtilen dosyadan bir görüntü yükler
+
 pyautogui.PAUSE = 0  
   # Her pyautogui çağrısı arasında beklenilecek süredir. Şuan 0 olduğu için bekleme zamanı yok.
 
