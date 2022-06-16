@@ -1,9 +1,16 @@
+#https://www.classicgame.com/game/Whack+a+Mole
+
 #Kullanılması gereken kitaplıklar;
 
 import cv2 as cv
+#Ana kütüphanemiz olan opencv kütüphanesini çağırdık ve cv2 yerine cv olarak adlandırdık.
 import pyautogui
+#Klavye ve mouse hareketini kontrol etmemizi sağlayan kütüphanedir. Mouse hareketi ve tıklama için kullandık
 from time import sleep
+#Kodun işleyişini belli bir süre bekletmek için kullanılır.
 import keyboard
+#Programı başlatıp durdurmak için kullandığımız bir kütüphane.
+
 
 #template (Şabonun seçimi(Burun) ve dosya merkezi burada, eğer çalışmazsa ekran görüntüsünü değiştir)
 template = cv.imread("foto/burun.png") #Şablon==template, klasör/png dosyasının ismini target gösteriyor
