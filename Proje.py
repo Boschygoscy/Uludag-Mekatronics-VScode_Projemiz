@@ -46,15 +46,6 @@ while True:
     image = cv.imread("foto/image.png")
     #cv2. imread() komutu belirtilen dosyadan bir görüntü yükler
 
-pyautogui.PAUSE = 0  
-  # Her pyautogui çağrısı arasında beklenilecek süredir. Şuan 0 olduğu için bekleme zamanı yok.
-
-
-print("Başlatmak için 's' tuşuna basınız.")
-print("Çıkmak için 'q' tuşuna basınız.")
-keyboard.wait('s')
-# "s" tuşuna basarak program başlatılır. 
-# "q" tuşuna basarak programdan çıkış yapılır. 
 
 
 >>>>>>> afe059df4c0641a49cd83d157b8c3c4436c5b3c5
