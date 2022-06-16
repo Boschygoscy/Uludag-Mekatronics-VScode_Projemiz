@@ -83,6 +83,23 @@ while True:
             )
 
             #pyautogui.click ile belirttiğimiz koordinatlarda tıklama işlemi yapar. 
-            #max_loc ile objenin koordinatlarını buluruz üstüne x koordinatını ekleyerek nesnenin aranacak bölgesini oluşturuyoruz   
+            #max_loc ile objenin koordinatlarını buluyoruz üstüne x koordinatını ekleyerek nesnenin aranacak bölgesini oluşturuyoruz.
+            
+            image = cv.rectangle(   # Dörtgen çizebilmek için rectangle fonksiyonu kullanılmaktadır.
+                                    # İstenilen nesneyi doğru parametrelerle kare içinde göstermek için yazdık.
+                img = image,
+                pt1 = max_loc,
+                pt2 = (
+                    max_loc[0] + template_w, # = pt2 x 
+                    max_loc[1] + template_h # = pt2 y
+                ),
+                color = (0,0,255), #Renk seçimi olarak maviyi seçtik.
+                thickness = -1  # Dörtgenin kenar yoğunluğunu ayarlar -1 yaptığımız için dörtgenin içini yukarıda seçtiğimiz renkle doldurdu.
+            ) # if döngüsünün sonu
+            
+            #  Bunu için fonksiyona sol üst köşenin ve sağ alt köşenin koordinatları, kenarlık rengi ve kalınlığı gönderilir
+        
+        else:
+            break
 
          
