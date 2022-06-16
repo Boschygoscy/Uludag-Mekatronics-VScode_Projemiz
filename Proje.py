@@ -54,3 +54,6 @@ while True:
         # cv.resize() komutuyla yeniden boyutlandırmak istediğimiz nesneyi ve piksel büyüklüğünü(x,y) seçiyoruz bunun için daha öncesinde aldığımız
         #ekran görüntülerini kullanıcağız ve anlık olarak bilgisayarın gözünden nesneleri göreceğiz
         )
+        cv.imshow("vision", image_mini)
+        cv.waitKey(10)
+        #cv.imshow() komutuyla görüntünün ekranda kalmasını sağlarız
