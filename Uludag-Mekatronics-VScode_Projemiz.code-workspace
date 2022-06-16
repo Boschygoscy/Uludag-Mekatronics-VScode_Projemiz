@@ -1,3 +1,13 @@
+
+İlk önce pip indir(Terminal); 
+   pip'i güncelle
+   opencv ve python'u indirmen gerekiyor:  pip install opencv-python  
+   pip ile pyhthon güncellenir:            pip install --upgrade python
+   Mouse hareketi ve tıklama için:         pip install pyautogui
+   Klavye başlatma ve durdurma:            pip install keyboard
+
+import edilmesi gerekenler;
+
 import cv2 as cv
 import pyautogui
 from time import sleep
