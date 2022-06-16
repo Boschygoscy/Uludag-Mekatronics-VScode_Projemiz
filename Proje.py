@@ -101,5 +101,6 @@ while True:
         
         else:
             break
-
+    if keyboard.is_pressed('q'):
+        break
          
