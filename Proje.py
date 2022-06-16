@@ -44,7 +44,7 @@ while True:
     image = cv.imread("foto/image.png")
     #cv2. imread() komutu belirtilen dosyadan bir görüntü yükler
 
-   while True:
+    while True:
 
         # Bilgisayarın ne gördüğünü göstermek için küçük bir pencere açar
         
@@ -55,5 +55,24 @@ while True:
         #ekran görüntülerini kullanıcağız ve anlık olarak bilgisayarın gözünden nesneleri göreceğiz
         )
         cv.imshow("vision", image_mini)
-        cv.waitKey(10)
-        #cv.imshow() komutuyla görüntünün ekranda kalmasını sağlarız
+        cv.waitKey(10) #10 saniye bekleme süresi.
+        #cv.imshow() komutuyla görüntünün ekranda kalmasını sağlarız.
+
+        image_gray = cv.cvtColor(image, cv.COLOR_RGB2GRAY) #template_gray = cv.cvtColor sekmesinden bire-bir aynısını kopyaladım.
+           #Bu sayede burun fotoğrafını gri renginde, daha belirgin ve anlaşılabilir hale gelicek
+
+        result = cv.matchTemplate(
+           #parametre şablonuna gidiyoruz
+            image = image_gray, # ilk parametremizin gri halini seçtik
+            templ = template_gray, #ikinci parametremiz şablonun gri halini seçiyoruz
+            method = cv.TM_CCOEFF_NORMED #TM_CCOEFF_NORMED yerine başka bir yöntem de seçebiliriz 
+            # şablonlar burada: https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html#ga3a7850640f1fe1f58fe91a2d7583695d
+        )
+        min_val, max_val, min_loc, max_loc = cv.minMaxLoc(result)
+        #sonuçları: max val highest matching score / en yüksek eşleşme değeri, max loc/ kordinat lokasyonu 
+
+        #en iyi eşleşmeyi yakaladığımızdan emin olduktan sonra;
+
+        #Üstteki kodların eşik değerlerinin ayarlanması için if komutu ile düzenlenmesi gerekiyor.    
+
+         
