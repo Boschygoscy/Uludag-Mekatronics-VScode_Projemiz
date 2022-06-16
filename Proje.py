@@ -1,3 +1,7 @@
+#Programı kullanabilmek için gereksinimler;
+#1920x1080p ekran çözünürlüğü
+#Oyunun tam ekranda açık olması
+
 #https://www.classicgame.com/game/Whack+a+Mole
 
 #Kullanılması gereken kitaplıklar;
