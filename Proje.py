@@ -27,8 +27,15 @@ x, y, w, h = 523, 247, 875, 679 #Ekranın kordinatları, capture'laması gereken
      #(!!!) Ekran çözünürlüğüne göre bu değer değişir. Manuel olarak ayarlanması gerekebilir. 
 sleep(3) #Aktif etme tuşuna bastığımızda beklememiz gereken süre (3) bu 3 saniyelik aralıkta durumumuz: False 
 
+pyautogui.PAUSE = 0  
+  # Her pyautogui çağrısı arasında beklenilecek süredir. Şuan 0 olduğu için bekleme zamanı yok.
 
 
+print("Başlatmak için 's' tuşuna basınız.")
+print("Çıkmak için 'q' tuşuna basınız.")
+keyboard.wait('s')
+# "s" tuşuna basarak program başlatılır. 
+# "q" tuşuna basarak programdan çıkış yapılır. 
 
 
 
