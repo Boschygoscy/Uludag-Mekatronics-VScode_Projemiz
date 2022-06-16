@@ -44,6 +44,13 @@ while True:
     image = cv.imread("foto/image.png")
     #cv2. imread() komutu belirtilen dosyadan bir görüntü yükler
 
+   while True:
 
-
-
+        # Bilgisayarın ne gördüğünü göstermek için küçük bir pencere açar
+        
+        image_mini = cv.resize(
+            src = image,
+            dsize = (450,350)
+        # cv.resize() komutuyla yeniden boyutlandırmak istediğimiz nesneyi ve piksel büyüklüğünü(x,y) seçiyoruz bunun için daha öncesinde aldığımız
+        #ekran görüntülerini kullanıcağız ve anlık olarak bilgisayarın gözünden nesneleri göreceğiz
+        )
